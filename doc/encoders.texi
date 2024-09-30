@@ -1929,6 +1929,77 @@ by ":". See the SVT-AV1 encoder user guide for a list of accepted parameters.
 
 @end table
 
+@section libsvtav1psy
+
+SVT-AV1-PSY encoder wrapper.
+
+Requires the presence of the SVT-AV1-PSY headers and library during configuration.
+You need to explicitly configure the build with @code{--enable-libsvtav1psy}.
+
+@subsection Options
+
+@table @option
+@item profile
+Set the encoding profile.
+@table @samp
+@item main
+@item high
+@item professional
+@end table
+
+@item level
+Set the operating point level. For example: '4.0'
+
+@item hielevel
+Set the Hierarchical prediction levels.
+@table @samp
+@item 3level
+@item 4level
+This is the default.
+@end table
+
+@item tier
+Set the operating point tier.
+@table @samp
+@item main
+This is the default.
+@item high
+@end table
+
+@item qmax
+Set the maximum quantizer to use when using a bitrate mode.
+
+@item qmin
+Set the minimum quantizer to use when using a bitrate mode.
+
+@item crf
+Constant rate factor value used in crf rate control mode (0-70).
+
+@item qp
+Set the quantizer used in cqp rate control mode (0-63).
+
+@item sc_detection
+Enable scene change detection.
+
+@item la_depth
+Set number of frames to look ahead (0-120).
+
+@item preset
+Set the quality-speed tradeoff, in the range 0 to 13.  Higher values are
+faster but lower quality.
+
+@item tile_rows
+Set log2 of the number of rows of tiles to use (0-6).
+
+@item tile_columns
+Set log2 of the number of columns of tiles to use (0-4).
+
+@item svtav1-params
+Set SVT-AV1 options using a list of @var{key}=@var{value} pairs separated
+by ":". See the SVT-AV1 encoder user guide for a list of accepted parameters.
+
+@end table
+
 @section libjxl
 
 libjxl JPEG XL encoder wrapper.
