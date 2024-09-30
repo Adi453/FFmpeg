@@ -727,7 +727,7 @@ static const AVOption options[] = {
 #undef LEVEL
 
     { "crf", "Constant Rate Factor value", OFFSET(crf),
-      AV_OPT_TYPE_FLOAT, { .db1 = 0 }, 0, 70, VE },
+      AV_OPT_TYPE_FLOAT, { .dbl = 0 }, 0, 70, VE },
     { "qp", "Initial Quantizer level value", OFFSET(qp),
       AV_OPT_TYPE_INT, { .i64 = 0 }, 0, 63, VE },
     { "svtav1-params", "Set the SVT-AV1 configuration using a :-separated list of key=value parameters", OFFSET(svtav1_opts), AV_OPT_TYPE_DICT, { 0 }, 0, 0, VE },
